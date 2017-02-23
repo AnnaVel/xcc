@@ -289,6 +289,11 @@ namespace FirstFloor.Xcc
                         attribute.Remove();
                     }
                 }
+                else
+                {
+                    attribute.Remove();
+                    element.Add(attribute);
+                }
             }
 
             // add linenumber info

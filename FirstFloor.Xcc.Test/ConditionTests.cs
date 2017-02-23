@@ -244,6 +244,14 @@ namespace FirstFloor.Xcc.Test
 </Grid>");
         }
 
+        [TestMethod]
+        public void TestPropertiesOrderShouldNotChange()
+        {
+            TestXaml("DEBUG",
+                "<Button debug:Width=\"20\" Height=\"20\" />",
+                "<Button Width=\"20\" Height=\"20\" />");
+        }
+
         private static void TestXaml(string symbols, string xamlSnippet, string expectedResult)
         {
             var preprocessor = new XamlPreprocessor(symbols, false);
